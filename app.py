@@ -9,11 +9,11 @@ import random
 import string
 from modules.specificform import SpecificForm
 from flask_heroku import Heroku
+from os import environ
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgresql-cubed-05568')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-heroku config:set FLASK_SECRET_KEY="mysecretkey"
 Db.init_app(app)
 
 
