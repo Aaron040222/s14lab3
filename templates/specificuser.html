@@ -1,0 +1,19 @@
+<head>
+  <link href="{{ url_for('static', filename='./css/Form.css') }}" rel="stylesheet">
+</head>
+<h1>Enter the specific user you want to look up:</h1>
+<form class="specific-form" method="POST" action="/specificuser">
+     {{ form.hidden_tag() }}
+    <div class="specific-form-group">
+        {{ form.first_name.label }}:
+        {{ form.first_name }}
+        {% if form.first_name.errors %}
+            {% for error in form.first_name.errors %}
+                <p class="specific-error-message">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="specific-form-submit">
+        {{ form.submit }}
+    </div>
+</form>

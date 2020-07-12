@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Names and ages</title>
+  <link href="{{ url_for('static', filename='./css/name.css') }}" rel="stylesheet">
+</head>
+<body>
+
+{% for user in users: %}
+<h1>ID:{{user.user_id}}
+<br>name:{{user.first_name}}
+<br>age:{{user.age}}</h1>
+<br>
+{% endfor %}
+
+</body>
+</head>
+</html>

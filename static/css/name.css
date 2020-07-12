@@ -1,0 +1,12 @@
+body {
+    background-color: gainsboro;
+}
+
+h1 {
+    border: 1px solid ghostwhite;
+    border-left: 3px solid dimgrey;
+    text-align: center;
+    font-family: Impact;
+    color: dimgrey;
+    background-color: ghost background-color;
+}

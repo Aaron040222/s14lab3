@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>The result of the specific user</title>
+        <link href="{{ url_for('static', filename='./css/name.css') }}" rel="stylesheet">
+    </head>
+    <body>
+            <h1>ID:{{specificuser.user_id}}
+            <br>name:{{specificuser.first_name}}
+            <br>age:{{specificuser.age}}</h1>
+    </body>
+</head>

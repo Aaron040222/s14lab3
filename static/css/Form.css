@@ -1,0 +1,35 @@
+body {
+    background-color: gainsboro;
+}
+h1 {
+  text-align: left;
+  font-family: Impact;
+  color: dimgrey;
+  padding: ghostwhite;
+}
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px ghostwhite;
+  border: 1px solid dimgrey ;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-family: Impact;
+  color: dimgrey;
+}
+
+input[type=submit] {
+  background-color: dimgrey;
+  color: ghostwhite;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}

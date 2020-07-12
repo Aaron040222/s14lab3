@@ -1,0 +1,19 @@
+<head>
+  <link href="{{ url_for('static', filename='./css/Form.css') }}" rel="stylesheet">
+</head>
+<h1>Enter the number of random users you want:</h1>
+<form class="random-form" method="POST" action="/randomuser">
+     {{ form.hidden_tag() }}
+    <div class="random-form-group">
+        {{ form.numberofusers.label }}:
+        {{ form.numberofusers }}
+        {% if form.numberofusers.errors %}
+            {% for error in form.numberofusers.errors %}
+                <p class="random-error-message">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="random-form-submit">
+        {{ form.submit }}
+    </div>
+</form>
