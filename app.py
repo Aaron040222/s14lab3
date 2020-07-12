@@ -8,11 +8,12 @@ import psycopg2
 import random
 import string
 from modules.specificform import SpecificForm
+from flask_heroku import Heroku
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://aaron2:Aaron040222@localhost:5432/usersdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgresql-cubed-05568')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = "Aaron040222"
+heroku config:set FLASK_SECRET_KEY="mysecretkey"
 Db.init_app(app)
 
 
